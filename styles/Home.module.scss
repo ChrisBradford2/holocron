@@ -1,0 +1,26 @@
+.list {
+	list-style-type: none;
+	padding: 32px;
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 800px;
+
+	li {
+		border: solid 2px black;
+		border-radius: 10px;
+		height: 150px;
+		width: 150px;
+		margin: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		position: relative;
+		transition: all 0.3s ease-in-out;
+		&:hover {
+			cursor: pointer;
+			scale: 1.1;
+			box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+		}
+	}
+}
