@@ -4,6 +4,7 @@ import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.scss'
 import { NextPage } from 'next';
 import Link from 'next/link';
+import Footer from '../components/Footer';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -46,6 +47,7 @@ const Home: NextPage<HomeProps> = ({ root }) => {
           <li>Starships</li>
         </ul>
       </main>
+      <Footer />
     </div>
   );
 }
