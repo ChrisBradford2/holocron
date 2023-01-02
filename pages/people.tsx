@@ -1,4 +1,5 @@
 import Head from "next/head";
+import BackToHome from "../components/BackToHome";
 import Persons from "../components/Persons";
 
 const People = () => {
@@ -10,6 +11,7 @@ const People = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <BackToHome />
       <div>
         <h1>People</h1>
         <Persons />
