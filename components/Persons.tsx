@@ -1,8 +1,11 @@
+import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 
 interface People {
+  id: number;
   name: string;
   height: string;
+  mass: string;
   films: string[];
 }
 
@@ -40,12 +43,16 @@ const Persons: React.FC = () => {
 
   return (
     <div>
+      <p>Number of people: {people ? people.length : 'Loading...'}</p>
       {people ? (
         <ul>
-          {people.map(person => (
+          {people.map((person, index) => (
             <li key={person.name}>
-              <h1>{person.name}</h1>
-              <p>Height: {person.height}</p>
+            <Link href="/people/[id]" as={`/people/${index + 1}`}>
+              {person.name}
+            </Link>
+              <p>Height: {person.height}cm</p>
+              <p>Weight: {person.mass}kg</p>
               <p>Films:</p>
               <ul>
                 {films ? (
