@@ -1,5 +1,6 @@
 import Head from "next/head";
 import BackToHome from "../components/BackToHome";
+import Footer from "../components/Footer";
 import Persons from "../components/Persons";
 
 const People = () => {
@@ -16,6 +17,7 @@ const People = () => {
         <h1>People</h1>
         <Persons />
       </div>
+      <Footer/>
     </>
   );
 };
