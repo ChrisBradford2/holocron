@@ -1,7 +1,7 @@
 import Head from "next/head";
-import BackToHome from "../components/BackToHome";
-import Footer from "../components/Footer";
-import Persons from "../components/Persons";
+import BackToHome from "../../components/BackToHome";
+import Footer from "../../components/Footer";
+import Persons from "../../components/Persons";
 
 const People = () => {
   return (
