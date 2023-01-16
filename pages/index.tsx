@@ -46,7 +46,11 @@ const Home: NextPage<HomeProps> = ({ root }) => {
               Films
             </Link>
           </li>
-          <li>Species</li>
+          <li>
+            <Link href="/species">
+              Species
+            </Link>
+          </li>
           <li>Vehicles</li>
           <li>Starships</li>
         </ul>
