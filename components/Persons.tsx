@@ -1,8 +1,11 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 interface People {
   name: string;
+  next: string;
+  previous: string;
 }
 
 const Persons: React.FC = () => {
@@ -10,7 +13,7 @@ const Persons: React.FC = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const res = await fetch('https://swapi.dev/api/people/');
+      const res = await fetch('https://swapi.dev/api/people/?page=');
       const data = await res.json();
       setPeople(data.results);
     }
