@@ -6,7 +6,9 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 import Footer from '../components/Footer';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({
+  variable: '--inter-font',
+});
 
 interface HomeProps {
   root: {
@@ -19,7 +21,7 @@ interface HomeProps {
   };
 }
 
-const Home: NextPage<HomeProps> = ({ root }) => {
+const Home: NextPage<HomeProps> = () => {
   return (
     <div>
       <Head>
@@ -28,7 +30,7 @@ const Home: NextPage<HomeProps> = ({ root }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className={inter.variable}>
         <h1>Holocron</h1>
         <ul className={styles.list}>
           <li>

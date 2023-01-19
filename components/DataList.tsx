@@ -11,7 +11,6 @@ interface Props {
   getImage: (id: string, name: string) => string;
   category: string;
   setUrl: React.Dispatch<React.SetStateAction<string>>;
-  name: string;
 }
 
 interface Element {
