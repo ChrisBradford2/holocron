@@ -14,5 +14,6 @@ export default defineConfig({
     },
     // disable video recording
     video: false,
+    supportFile: false
   },
 });
