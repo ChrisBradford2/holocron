@@ -23,6 +23,7 @@ const Planets: React.FC = () => {
                 <meta name="description" content="Planets" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+            <h1>Planets</h1>
             <DataList
                 url={url}
                 getId={getId}
