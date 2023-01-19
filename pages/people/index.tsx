@@ -1,9 +1,18 @@
 import Head from "next/head";
-import BackToHome from "../../components/BackToHome";
+import { useState } from "react";
+import DataList from "../../components/DataList";
 import Footer from "../../components/Footer";
-import Persons from "../../components/Persons";
 
-const People = () => {
+const People: React.FC = () => {
+  const [url, setUrl] = useState<string>("https://swapi.dev/api/people/");
+  const getId = (url: string) => {
+    const id = url.split("/")[5];
+    return id;
+  };
+  const getImage = (id: string, name: string) => {
+    const image = `https://starwars-visualguide.com/assets/img/characters/${id}.jpg`;
+    return image;
+  };
   return (
     <>
       <Head>
@@ -12,12 +21,17 @@ const People = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <BackToHome />
       <div>
         <h1>People</h1>
-        <Persons />
+        <DataList
+          url={url}
+          getId={getId}
+          getImage={getImage}
+          category="people"
+          setUrl={setUrl}
+        />
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };

@@ -17,6 +17,12 @@ const Starships: React.FC = () => {
 
     return (
         <div>
+            <Head>
+                <title>Starships</title>
+                <meta name="description" content="Starships" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+            <h1>Starships</h1>
             <DataList 
                 url={url}
                 getId={getId}

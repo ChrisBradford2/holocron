@@ -1,10 +1,19 @@
 import Head from "next/head";
-import BackToHome from "../../components/BackToHome";
-import FilmsList from "../../components/FilmsList";
+import { useState } from "react";
+import DataList from "../../components/DataList";
 import Footer from "../../components/Footer";
 
 
-const Films = () => {
+const Films: React.FC = () => {
+    const [url, setUrl] = useState<string>("https://swapi.dev/api/films/");
+    const getId = (url: string) => {
+        const id = url.split('/')[5];
+        return id;
+    }
+    const getImage = (id: string, name: string) => {
+        const image = `https://starwars-visualguide.com/assets/img/films/${id}.jpg`;
+        return image;
+    }
     return (
         <>
         <Head>
@@ -13,10 +22,15 @@ const Films = () => {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="icon" href="/favicon.ico" />
         </Head>
-        <BackToHome />
         <div>
             <h1>Films</h1>
-            <FilmsList />
+            <DataList
+                url={url}
+                getId={getId}
+                getImage={getImage}
+                category='films'
+                setUrl={setUrl}
+            />
         </div>
         <Footer />
         </>
