@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [16.x, 18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -28,4 +28,11 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run lint
-    - run: npm test
+    - name: Cypress.io
+      # You may pin to the exact commit or the version.
+      # uses: cypress-io/github-action@37c511bc322f112c2dd629d3610f4f096bc80096
+      uses: cypress-io/github-action@v5.0.5
+      with:
+        # Command for starting local server in the background
+        start: npm run dev
+    
