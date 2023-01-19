@@ -1,14 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.scss'
 import { NextPage } from 'next';
 import Link from 'next/link';
 import Footer from '../components/Footer';
-
-const inter = Inter({
-  variable: '--inter-font',
-});
 
 interface HomeProps {
   root: {
@@ -30,7 +25,7 @@ const Home: NextPage<HomeProps> = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={inter.variable}>
+      <main>
         <h1>Holocron</h1>
         <ul className={styles.list}>
           <li>

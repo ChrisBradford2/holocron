@@ -1,6 +1,4 @@
 import Head from "next/head";
-import BackToHome from "../../components/BackToHome";
-import PlanetList from "../../components/PlanetList";
 import { useState } from "react";
 import DataList from "../../components/DataList";
 
