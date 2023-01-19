@@ -70,7 +70,7 @@ const DataList: React.FC<Props> = ({
       setIsLoading(false);
     }
     fetchData();
-  }, [url]);
+  }, [url, getId, getImage]);
 
   return (
     <div>
