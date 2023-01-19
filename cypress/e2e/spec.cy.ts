@@ -100,7 +100,8 @@ describe('Main spec', () => {
   it('Visits films page', () => {
     cy.visit('localhost:3000/films')
     cy.get('h1').should('contain', 'Films')
-    cy.wait(1000)
+    // Wait for the API to respond
+    cy.wait(5000)
     cy.get('li').should('have.length', 6)
     // Check that the first li has the link and the image
     cy.get('li').first().find('a').should('have.attr', 'href')
