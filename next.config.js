@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
 
-module.exports = nextConfig
+const withImages = require('next-images');
+module.exports = Object.assign(withImages(), {
+  reactStrictMode: true,
+  images: {
+    domains: ['starwars-visualguide.com']
+  }
+});
