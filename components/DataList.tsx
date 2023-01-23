@@ -4,6 +4,7 @@ import Image from "next/image";
 import NavigationButtons from "./NavigationButtons";
 import axios from "axios";
 import BackToHome from "./BackToHome";
+import placeholder from "../public/placeholder.jpg";
 
 interface Props {
   url: string;
@@ -108,7 +109,7 @@ const DataList: React.FC<Props> = ({
                     />
                   ) : (
                     <Image
-                      src="	https://starwars-visualguide.com/assets/img/placeholder.jpg"
+                      src="https://starwars-visualguide.com/assets/img/placeholder.jpg"
                       alt={element.title}
                       width={200}
                       height={200}
