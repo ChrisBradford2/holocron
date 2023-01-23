@@ -59,7 +59,7 @@ const DataList: React.FC<Props> = ({
             ...element,
 						title	: element.title ? element.title : element.name,
             hasDefaultImage: hasDefaultImage || !imageExists,
-            image: imageExists ? image : "",
+            image: imageExists ? image : "https://starwars-visualguide.com/assets/img/placeholder.jpg"
           };
         })
       );
@@ -92,28 +92,12 @@ const DataList: React.FC<Props> = ({
                   >
                     {element.title}
                   </Link>
-                  {!element.hasDefaultImage ? (
                     <Image
                       src={element.image}
                       alt={element.title}
                       width={200}
                       height={200}
-                      onError={() => {
-                        setData((prevData: Element[]) => {
-                          const newData = [...prevData];
-                          newData[index].hasDefaultImage = true;
-                          return newData;
-                        });
-                      }}
                     />
-                  ) : (
-                    <Image
-                      src="https://starwars-visualguide.com/assets/img/placeholder.jpg"
-                      alt={element.title}
-                      width={200}
-                      height={200}
-                    />
-                  )}
                 </li>
               ))}
             </ul>
