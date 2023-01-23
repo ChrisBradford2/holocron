@@ -4,7 +4,6 @@ import Image from "next/image";
 import NavigationButtons from "./NavigationButtons";
 import axios from "axios";
 import BackToHome from "./BackToHome";
-import placeholder from "../public/placeholder.jpg";
 
 interface Props {
   url: string;
